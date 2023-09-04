@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Raleway:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .mynav {
+        background-color: #f5f5f5;
+        position: fixed;
+        box-shadow: 0px 0px 5px 0px;
+        width: 100%;
+        min-height: 64px;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+      }
+
+      .title1 {
+        font-size: larger;
+        background: linear-gradient(115deg, #0974f1, #87ceeb);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        font-size: 64px;
+      }
+
+      .full-title {
+        width: 50%;
+        margin-left: 5%;
+      }
+
+      .navbar-nav li {
+        margin-left: 100px;
+        font-weight: 500;
+      }
+
+      * {
+        font-family: "Raleway", sans-serif;
+      }
+
+      .mynav li {
+        border-radius: 30px;
+        margin-right: 5px;
+        border: 5px;
+      }
+
+      .myhome {
+        padding-top: 160px;
+      }
+
+      .myhome img {
+        max-width: 23%;
+        height: 23%;
+        filter: drop-shadow(0px 0px 140px cyan);
+        display: block;
+        margin-left: 10%;
+      }
+
+      .about {
+        padding: 100px;
+        margin-top: 70px;
+      }
+
+      .myabout {
+        margin-top: 90px;
+      }
+
+      .myabout p {
+        max-width: 30%;
+        margin-left: 20%;
+      }
+
+      .list-group {
+        position: relative;
+        border: none;
+        margin-left: 20px;
+      }
+
+      .list-group-item {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        position: relative;
+        border: none;
+        background-color: transparent;
+      }
+
+      .list-group-item::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 2px;
+        height: 50%;
+        background-color: #007bff;
+      }
+
+      .list-group-item i {
+        font-size: 16px;
+        margin-right: 10px;
+      }
+
+      .project {
+        filter: drop-shadow(0px 0px 150px cyan);
+        padding: 30px;
+        margin-top: 60px;
+        text-align: center;
+      }
+
+      .project h2 {
+        margin-top: 65px;
+      }
+
+      .project img {
+        padding: 30px;
+      }
+
+      .hire {
+        background: linear-gradient(115deg, #0974f1, #87ceeb);
+        padding: 50px;
+      }
+
+      .hire h2 {
+        width: 100%;
+      }
+
+      .hire button {
+        margin-left: 30%;
+        max-height: 75px;
+        width: 500px;
+      }
+
+      .contact {
+        filter: drop-shadow(0px 0px 150px turquoise);
+      }
+
+      .contact h2 {
+        margin-top: 40px;
+        font-weight: bold;
+      }
+
+      .contact-name {
+        width: fit-content;
+      }
+    </style>
+
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+    <div class="mynav">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" style="font-weight: 900; padding-left: 75px"
+            >Yosep Fernando Panggabean</a
+          >
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms" style="margin-left: 50%">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#project">Project</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="myhome">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container" style="display: flex; justify-content: center">
+          <img src="images/Foto.png" />
+          <div class="full-title">
+            <h1 class="display-4" style="font-family: 'Montserrat', sans-serif">
+              Hi there! I'm a<br />
+            </h1>
+            <h1 class="title1" style="font-family: 'Montserrat', sans-serif">
+              Web<br />Developer
+            </h1>
+            <p class="lead">
+              I'm an Information Technology student with an insatiable curiosity
+              for the digital world and a passion for crafting exceptional web
+              experiences. My journey in the realm of technology has been a
+              thrilling adventure of exploring the latest trends in web
+              development, from responsive design to dynamic web applications.
+              I'm dedicated to mastering the art of code, always eager to learn,
+              and excited to transform innovative ideas into engaging online
+              realities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="about" id="about">
+      <h2
+        class="text-center mb-5"
+        style="font-family: 'Montserrat', sans-serif"
+      >
+        About Me
+      </h2>
+      <div class="myabout" style="display: flex">
+        <p>
+          My name is Yosep Fernando Panggabean, I am currently an information
+          technology student at Udayana University with ambitions to graduate
+          with a bachelor's degree in computer science. I did not get much
+          knowledge related to software development from my school. My intention
+          to be a programmer has actually emerged since I was in high school,
+          but I only have gotten into it when I graduated from high school.
+        </p>
+        <div class="list-group">
+          <h2 style="font-family: 'Montserrat', sans-serif; color: cyan">
+            Education Timeline
+          </h2>
+          <div class="list-group-item">
+            <i class="fa fa-university"></i> Universitas Udayana (Recent)
+          </div>
+          <div class="list-group-item">
+            <i class="fa fa-graduation-cap"></i> SMAN 5 Tambun Selatan
+          </div>
+          <div class="list-group-item">
+            <i class="fa fa-graduation-cap"></i> SMPK IPEKA Grand Wisata
+          </div>
+          <div class="list-group-item">
+            <i class="fa fa-graduation-cap"></i> SDK IPEKA Grand Wisata
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project" id="project">
+      <div class="container">
+        <h2 class="text-center mb-5">My Work</h2>
+        <div class="row">
+          <div class="col-md-4 mb-5">
+            <img class="img-fluid" src="images/project 3.jpg" alt="" />
+            <h3 class="mb-3">Hotel's Financial Application</h3>
+            <p>A Web Application for financial processing in a hotel</p>
+            <a class="btn btn-outline-dark">View Project</a>
+          </div>
+          <div class="col-md-4 mb-5">
+            <img
+              class="img-fluid"
+              src="images/project 1.PNG"
+              alt=""
+              style="max-height: 400px"
+            />
+            <h3 class="mb-3">Food Health Mobile Food Ordering Application</h3>
+            <p id="tes">
+              An app designed for streamlining food ordering experience. the
+              user-friendly platform allows user to browse restaurant menus,
+              customize orders, and doing payments to minimize queues
+            </p>
+            <a class="btn btn-outline-dark">View Project</a>
+          </div>
+          <div class="col-md-4 mb-5">
+            <img class="img-fluid" src="images/project 2.jfif" alt="" />
+            <h3 class="mb-3">Hospital's Pharmacy Web Application</h3>
+            <p>
+              A web application is made to connect patients with hospital
+              employees in the pharmacy field, such as prescribing drugs and
+              others
+            </p>
+            <a class="btn btn-outline-dark">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="hire" style="display: flex">
+      <h2 style="font-family: 'Montserrat', sans-serif">
+        Want to work with me?<br />
+        <p>Feel free to contact or hire me</p>
+      </h2>
+      <button
+        type="button"
+        class="btn btn-light"
+        style="font-family: 'Montserrat', sans-serif"
+      >
+        Hire Me
+      </button>
+    </div>
+
+    <section class="contact" id="contact" style="padding: 100px;">
+      <div class="container-contact">
+        <h2 class="text-center" style="font-family: 'Montserrat', sans-serif">
+          <br /><br /><br />Contact Me
+        </h2>
+        <div class="row">
+          <div class="form-contact">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Your Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Message</label
+              >
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-outline-dark" style="margin-bottom: 15px; margin-left: 15px; max-width: 10%;">Submit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center text-white" style="background-color: #f1f1f1">
+      <div class="container pt-4">
+        <section class="mb-4">
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-twitter"></i
+          ></a>
+
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-google"></i
+          ></a>
+
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-instagram"></i
+          ></a>
+
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="#!"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="fab fa-github"></i
+          ></a>
+        </section>
+      </div>
+      <div
+        class="text-center text-dark p-3"
+        style="background-color: rgba(0, 0, 0, 0.2)"
+      ></div>
+    </footer>
+  </body>
+</html>
